@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Pulsar Test</title>
+</head>
+<body>
+<h1>Pulsar Test</h1>
+<p>
+Hello [% who %], how are you today?
+</p>
+<h2>Example URLs</h2>
+<ul>
+<li><a href="/">Default URL with default name.</a></li>
+<li><a href="/?name=Bob">Override name via Query string.</a></li>
+<li><a href="/hello/Lisa">Override name via URL parameter.</a></li>
+</ul>
+</body>
+</html>
