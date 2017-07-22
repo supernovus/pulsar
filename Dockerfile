@@ -3,7 +3,7 @@
 #
 # A bleeding edge Rakudo Perl 6 distribution in a Docker container. 
 #
-# Comes with both 'panda' and 'zef' for module management.
+# Comes with 'zef' for module management.
 #
 ###############################################################################
 
@@ -35,18 +35,12 @@ RUN RUN_DEPS=' \
     && perl Configure.pl --prefix=/usr --gen-moar \
     && make install \
   ) \
-  && git clone --recursive git://github.com/tadzik/panda.git /usr/src/panda \
-  && ( \
-    cd /usr/src/panda \
-    && ./bootstrap.pl \
-  ) \
   && git clone git://github.com/ugexe/zef.git /usr/src/zef \
   && ( \
     cd /usr/src/zef \
     && perl6 -Ilib bin/zef install . \
   ) \
   && rm -rf /usr/src/rakudo \
-  && rm -rf /usr/src/panda \
   && rm -rf /usr/src/zef
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin

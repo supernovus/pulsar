@@ -4,7 +4,7 @@
 
 A bleeding edge Rakudo Perl 6 distribution for Docker.
 
-Comes with the 'panda' and 'zef' packages, you can install the rest with them.
+Comes with the 'zef' package manager.
 
 This is not a complete image, and has no CMD or ENTRYPOINT. It's meant as a
 base image to build your own standalone Perl 6 applications using Docker.
